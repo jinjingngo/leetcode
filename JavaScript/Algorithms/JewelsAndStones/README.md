@@ -13,5 +13,6 @@ Output: 3
 
 #### Example 2:
 ```JavaSctipt
-
+Input: J = 'z', S = 'ZZ'
+Output: 0
 ```
