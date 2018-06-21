@@ -6,15 +6,14 @@
 
 let numJewelsInStones = function (J, S) {
   let count = 0;
-  let jewels = J.split('');
-  let stones = S.split('');
-  for (let i = 0; i < stones.length; i++) {
-    let stone = stones[i];
-    jewels.map(function (jewel) {
-      if (jewel === stone) {
-        count += 1;
-      }
-    });
+  let jewels = new Map();
+  for (let j of J) {
+    jewels.set(j, 0);
+  }
+  for (let s of S) {
+    if (jewels.has(s)) {
+      count++;
+    }
   }
   return count;
 };
