@@ -4,10 +4,8 @@
  */
 
 const flipAndInvertImage = function (A) {
-  const reverse = A.map(function (element) {
-    return element.reverse();
-  });
-  const invert = reverse.map(function (element) {
+  const invert = A.map(function (element) {
+    element = element.reverse();
     return element.map(function (single) {
       return Number(!single);
     });
@@ -18,4 +16,5 @@ const flipAndInvertImage = function (A) {
 const A = [[1, 1, 0], [1, 0, 1], [0, 0, 0]];
 
 const invert = flipAndInvertImage(A);
-console.log(invert);
+console.log('I: ', A);
+console.log('O: ', invert);
