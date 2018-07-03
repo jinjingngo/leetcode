@@ -4,10 +4,10 @@
  */
 
 const flipAndInvertImage = function (A) {
-  const invert = A.map(function (element) {
-    element = element.reverse();
-    return element.map(function (single) {
-      return Number(!single);
+  const invert = A.map(function (row) {
+    row = row.reverse();
+    return row.map(function (column) {
+      return Number(!column);
     });
   });
   return invert;
