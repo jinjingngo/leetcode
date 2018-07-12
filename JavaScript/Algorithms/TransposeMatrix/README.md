@@ -36,3 +36,14 @@ First we initial an array `result` as `A`'s child elements' length, and we loop 
 Second we loop in `A`'s length;
 And we give the `A[j][i]` to `result[i][j]`.
 Thats all about my solution.
+
+But I found a solution more efficiency
+```javascript
+/**
+ * @param {number[][]} matrix
+ * @return {number[][]}
+ */
+let transpose = (matrix) => {
+  return matrix[0].map((col, i) => matrix.map(row => row[i]));
+}
+```
