@@ -1,6 +1,7 @@
 /**
  * Peak Index in a Mountain Array
  * @param {Array} A
+ * @returns {number}
  */
 const peakIndexInMountainArray = (A) => {
 	const max = Math.max(...A);
