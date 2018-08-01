@@ -1,4 +1,4 @@
-# [728.](https://leetcode.com/problems/self-dividing-numbers/description/)
+# [728. Self Dividing Numbers](https://leetcode.com/problems/self-dividing-numbers/description/)
 
 ## Description
 A *self-dividing number* is a number that is divisible by every digit it contains.  
@@ -44,8 +44,8 @@ Output is
 ```
 [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 21, 22 ]
 ```
-Apperently, 21 is not a self-dividing number, wrong solution.  
-Because the result of the tenary `divid = i % Number(digit) === 0 ? true : false;` always based on calculate of the last digit.  
+Apparently, 21 is not a self-dividing number, wrong solution.  
+Because the result of the ternary `divid = i % Number(digit) === 0 ? true : false;` always based on calculate of the last digit.  
 
 ## Solution 2
 ```javascript
