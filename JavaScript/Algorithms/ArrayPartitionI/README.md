@@ -58,8 +58,8 @@ I figured it our from the **Hints**:
 
 > try come example like 1, 2, 3, 4  
 
-Aha, maximums come from the pairs' minimun number. So we  
+Aha, maximums come from the pairs' minimum number. So we  
 1. order the array in `asc`
-2. filter the pairs' minimun number and store into an array
-3. sum the minimun number array
+2. filter the pairs' minimum number and store into an array
+3. sum the minimum number array
 4. got the right anwser
