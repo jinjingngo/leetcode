@@ -1,7 +1,7 @@
 # [561. Array Partition I](https://leetcode.com/problems/array-partition-i/description/)
 
 ## Description
-Given an array of **2n** integers, your task is to group these integers into **n** pairs of integers, say (a1, b1), (a2, b2), ..., (an, bn) which makes sum of min(ai, bi) for all *i* from *1* to *n* as larget as possible.  
+Given an array of **2n** integers, your task is to group these integers into **n** pairs of integers, say (a1, b1), (a2, b2), ..., (an, bn) which makes sum of min(ai, bi) for all *i* from *1* to *n* as large as possible.  
 
 ## Example 1
 ```
@@ -62,4 +62,4 @@ Aha, maximums come from the pairs' minimum number. So we
 1. order the array in `asc`
 2. filter the pairs' minimum number and store into an array
 3. sum the minimum number array
-4. got the right anwser
+4. got the right answer
