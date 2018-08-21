@@ -11,10 +11,13 @@
  * @returns {ListNode}
  */
 const middleNode = (head) => {
+	if (head === null) {
+		return null;
+	}
 	let fastPtr = head;
 	let slowPtr = head;
 	while (fastPtr !== null && fastPtr.next !== null) {
-		fastPtr = fastPtr.next.next;
+		fastPtr = fastPtr.next && fastPtr.next.next;
 		slowPtr = slowPtr.next;
 	}
 	return slowPtr;
