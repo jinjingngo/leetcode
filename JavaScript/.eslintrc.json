@@ -1,8 +1,9 @@
 {
     "extends": "standard",
     "rules": {
+			"no-tabs": 0,
 			"semi": ["error", "always"],
 			"indent": ["off", "tab"],
-			"no-tabs": 0
+			"no-unused-vars": "warn"
     }
 }
