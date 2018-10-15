@@ -10,10 +10,10 @@ const findWords = (words) => {
 	];
 	const rule = (word, rows) => {
 		const letters = word.toLowerCase().split('');
-		const first = letters[0];
-		const inRow = rows.filter(row => row.includes(first))[0];
-		const differentRow = letters.every(letter => inRow.includes(letter));
-		return differentRow;
+		const first = letters.shift();
+		const inRow = rows.filter(row => row.includes(first)).shift();
+		const differentRow = letters.some(letter => !inRow.includes(letter));
+		return !differentRow;
 	};
 	const matches = words.filter(word => rule(word, rows));
 	return matches;
