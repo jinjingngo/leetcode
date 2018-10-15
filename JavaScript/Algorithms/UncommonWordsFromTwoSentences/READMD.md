@@ -46,6 +46,6 @@ const uncommonFromSentences = (A, B) => {
 
 const A = 'this apple is sweet';
 const B = 'this apple is sour';
-const umcommons = uncommonFromSentences(A, B);
-console.log(umcommons);
+const uncommons = uncommonFromSentences(A, B);
+console.log(uncommons);
 ```
