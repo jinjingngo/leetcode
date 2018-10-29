@@ -11,10 +11,7 @@ const numUniqueEmails = (emails) => {
 	const periodless = (local, domain) => {
 		return `${local.replace(/\./g, '')}@${domain}`;
 	};
-	const splited = emails.map(email => divider(email, '@'));
-	const ignored = splited.map(item => ignorer(item[0], item[1]));
-	const locals = ignored.map(email => divider(email, '@'));
-	const duplicators = locals.map(item => periodless(item[0], item[1]));
+	const duplicators = emails.map(email => divider(email, '@')).map(item => ignorer(item[0], item[1])).map(email => divider(email, '@')).map(item => periodless(item[0], item[1]));
 	const unique = new Set(duplicators);
 	return unique.size;
 };
