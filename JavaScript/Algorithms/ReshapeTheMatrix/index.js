@@ -1,6 +1,6 @@
 /**
  * reshape the two-dimensional matrix
- * Use `Array.prototype.reduce()` to flate the two-dimensional matrix into one-dimensional flated matrix.
+ * Use `Array.prototype.reduce()` and `Array.prototype.concat()` to flate the two-dimensional matrix into one-dimensional flated matrix.
  * Use `Array.prototype.from()` to generate a slot matrix with specified `row` and `column`.
  * Use `Array.prototype.map()` to fulfill the slot matrix using the flated matrix elements.
  * @param {Array} matrix
