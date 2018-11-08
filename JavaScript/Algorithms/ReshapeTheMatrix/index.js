@@ -1,6 +1,6 @@
 /**
  * reshape the two-dimensional matrix
- * Use `Array.prototype.reduce()` and `Array.prototype.concat()` to flate the two-dimensional matrix into one-dimensional flated matrix.
+ * Use `Array.prototype.reduce()` and `Array.prototype.concat()` to flat the two-dimensional matrix into one-dimensional flated matrix.
  * Use `Array.prototype.from()` to generate a slot matrix with specified `row` and `column`.
  * Use `Array.prototype.map()` to fulfill the slot matrix using the flated matrix elements.
  * @param {Array} matrix
@@ -22,7 +22,7 @@ const matrixReshape = (matrix, r, c) => {
 	const column = Array.from({ length: c }, (v, i) => i + 1);
 	const slots = Array.from({ length: r }, _ => column);
 	let index = 0;
-	const reshaped = slots.map((row, i) => row.map((val, j) => flated[index++]));
+	const reshaped = slots.map(row => row.map(_ => flated[index++]));
 	return reshaped;
 };
 
