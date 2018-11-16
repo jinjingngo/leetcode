@@ -19,7 +19,7 @@ const matrixReshape = (matrix, r, c) => {
 		return matrix;
 	}
 	const flated = matrix.reduce((acc, val) => acc.concat(val));
-	const column = Array.from({ length: c }, (v, i) => i + 1);
+	const column = Array(c).fill(0);
 	const slots = Array.from({ length: r }, _ => column);
 	let index = 0;
 	const reshaped = slots.map(row => row.map(_ => flated[index++]));
