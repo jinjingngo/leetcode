@@ -2,7 +2,7 @@
 
 ## Description
 
-Given an binary tree, return the tilt of the **whold tree**.  
+Given a binary tree, return the tilt of the **whold tree**.  
 
 The title of the **tree node** is defined as the **absolute difference** between the sum of all left subtree node values and the sum of all right subtree node values. Null node has title 0.  
 
