@@ -1,6 +1,7 @@
 # [929. Unique Email Address](https://leetcode.com/problems/unique-email-addresses/description/)
 
 ## Description
+
 Every small consists of a local name and a domain name, separated by the @ sing.  
 
 For example, in `alice@leetcode.com`, `alice` is the local name, and `leetcode.com` is the domain name.  
@@ -16,13 +17,15 @@ It is possible to use both of these rules at the same time.
 Given a list of `emails`, we send one email to each address in the list. How many different address actually receive mails?
 
 ## Example 1
-```
+
+```javascript
 Input: ['test.email+alex@leetcode.com', 'test.e.mail+bob.cathy@leetcode.com', 'testemail+david@leet.tcode.com']
 Output: 2
 Explanation: 'testmail@leetcode.com', 'testemail@lee.tcode.com'
 ```
 
 ## Note
+
 - `1 <= emails[i].length <= 100`
 - `1 <= emails.length <= 100`
 - Each `emails[i]` contains exactly one `@` character
@@ -34,19 +37,19 @@ Explanation: 'testmail@leetcode.com', 'testemail@lee.tcode.com'
  * @returns {number}
  */
 const numUniqueEmails = (emails) => {
-	const divider = (email, symbol) => email.split(symbol);
-	const ignorer = (local, domain) => {
-		return `${local.includes('+') ? local.split('+')[0] : local}@${domain}`;
-	};
-	const periodless = (local, domain) => {
-		return `${local.replace(/\./g, '')}@${domain}`;
-	};
-	const splited = emails.map(email => divider(email, '@'));
-	const ignored = splited.map(item => ignorer(item[0], item[1]));
-	const locals = ignored.map(email => divider(email, '@'));
-	const duplicators = locals.map(item => periodless(item[0], item[1]));
-	const unique = new Set(duplicators);
-	return unique.size;
+  const divider = (email, symbol) => email.split(symbol);
+  const ignorer = (local, domain) => {
+    return `${local.includes('+') ? local.split('+')[0] : local}@${domain}`;
+  };
+  const periodless = (local, domain) => {
+    return `${local.replace(/\./g, '')}@${domain}`;
+  };
+  const splited = emails.map(email => divider(email, '@'));
+  const ignored = splited.map(item => ignorer(item[0], item[1]));
+  const locals = ignored.map(email => divider(email, '@'));
+  const duplicators = locals.map(item => periodless(item[0], item[1]));
+  const unique = new Set(duplicators);
+  return unique.size;
 };
 
 const emails = [ 'test.email+alex@leetcode.com', 'test.e.mail+bob.cathy@leetcode.com', 'testemail+david@leet.tcode.com' ];

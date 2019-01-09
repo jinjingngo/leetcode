@@ -34,7 +34,7 @@ TIlt of binary tree : 0 + 0 + 1 = 1
 ```javascript
 /**
  * Definition for a binary tree node.
- * @param {Number} val 
+ * @param {Number} val
  */
 function TreeNode (val) {
   this.val = val;

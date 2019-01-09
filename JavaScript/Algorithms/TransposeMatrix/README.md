@@ -1,22 +1,25 @@
-#  [868. Transpose Matrix](https://leetcode.com/problems/transpose-matrix/description/)
+# [868. Transpose Matrix](https://leetcode.com/problems/transpose-matrix/description/)
 
 ## Description
+
 Given a matrix `A`, return the transpose of `A`.
 
 The transpose of a matrix is the matrix flipped over it's main diagonal, switching the row and column indices of the matrix.
 
 ## Example
-```
+
+```javascript
 Input: [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 Output: [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
 ```
 
-```
+```javascript
 Input: [[1, 2, 3], [4, 5, 6]]
 Output: [[1, 4], [2, 5], [3, 6]]
 ```
 
 ## Solution
+
 ```javascript
 const transpose = function (A) {
   const result = new Array(A[0].length);
@@ -38,6 +41,7 @@ And we give the `A[j][i]` to `result[i][j]`.
 Thats all about my solution.
 
 But I found a solution more efficiency
+
 ```javascript
 /**
  * @param {number[][]} matrix

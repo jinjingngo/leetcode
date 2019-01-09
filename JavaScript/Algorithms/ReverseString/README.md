@@ -1,21 +1,25 @@
 # [344. Reverse String](https://leetcode.com/problems/reverse-string/description/)
 
 ## Description
+
 Write a function that takes a string as input and returns the string reversed.
 
 ## Example 1
-```
+
+```javascript
 Input: 'hello'
 Output: 'olleh'
 ```
 
 ## Example 2
-```
+
+```javascript
 Input: 'A man, a plan, a canal: Panama'
 Output: 'amanaP :lanac a ,nalp a ,nam A'
 ```
 
 ## Solution
+
 ```javascript
 /**
  * Reverse String takes a string as input and returns the string reversed
@@ -23,7 +27,8 @@ Output: 'amanaP :lanac a ,nalp a ,nam A'
  * @returns {string}
  */
 const reverseString = (s) => {
-	return s.split('').reverse().join('');
+  return s.split('').reverse().join('');
 };
 ```
+
 simple array manipulation.
