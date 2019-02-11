@@ -50,3 +50,20 @@ const digits = 0;
 const result = addDigits(digits);
 console.log(result);
 ```
+
+## Solution with loop
+
+```javascript
+/**
+ * Solve with loop
+ * @param {Number} num
+ * @returns {Number}
+ */
+const addDigits = (num) => {
+  let digits = num.toString();
+  while (digits.length !== 1) {
+    digits = digits.split('').reduce(acculator, 0).toString();
+  }
+  return digits;
+}
+```
