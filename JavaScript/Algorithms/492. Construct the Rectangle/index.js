@@ -1,4 +1,7 @@
 /**
+ * Thw width will always less than or equal to the square root of the area 
+ * So we begin the search from `Math.sqrt(area)`.
+ * BOM... here is the shortest length with the width.
  * @param {Number} area
  * @returns {Array}
  */
