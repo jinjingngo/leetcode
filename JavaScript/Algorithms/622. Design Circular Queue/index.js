@@ -18,12 +18,11 @@ const MyCircularQueue = function (k) {
 MyCircularQueue.prototype.enQueue = function (value) {
   if (this.isFull()) {
     return false;
-  } else {
-    this.tail = (this.tail + 1) % this.capacity;
-    this.queue[this.tail] = value;
-    this.length += 1;
-    return true;
   }
+  this.tail = (this.tail + 1) % this.capacity;
+  this.queue[this.tail] = value;
+  this.length += 1;
+  return true;
 };
 
 /**
@@ -33,11 +32,10 @@ MyCircularQueue.prototype.enQueue = function (value) {
 MyCircularQueue.prototype.deQueue = function () {
   if (this.isEmpty()) {
     return false;
-  } else {
-    this.head = (this.head + 1) % this.capacity;
-    this.length -= 1;
-    return true;
   }
+  this.head = (this.head + 1) % this.capacity;
+  this.length -= 1;
+  return true;
 };
 
 /**
@@ -45,7 +43,7 @@ MyCircularQueue.prototype.deQueue = function () {
  * @return {Number}
  */
 MyCircularQueue.prototype.Front = function () {
-  return this.head >= 0 ? this.queue[this.head] : this.head;
+  return this.head >= 0 ? this.queue[this.head] : -1;
 };
 
 /**
@@ -53,7 +51,7 @@ MyCircularQueue.prototype.Front = function () {
  * @return {Number}
  */
 MyCircularQueue.prototype.Rear = function () {
-  return this.tail >= 0 ? this.queue[this.tail] : this.tail;
+  return this.tail >= 0 ? this.queue[this.tail] : -1;
 };
 
 /**
@@ -82,3 +80,4 @@ let isfull = queue.isFull(); // return true
 queue.deQueue(); // return true
 queue.enQueue(4); // return true
 rear = queue.Rear(); // return 4
+console.log(JSON.stringify(queue));
