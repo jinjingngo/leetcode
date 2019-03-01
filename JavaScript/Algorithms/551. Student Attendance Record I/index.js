@@ -28,11 +28,9 @@
  * @returns {Boolean}
  */
 const checkRecord = (s) => {
-	const attendances = s.split('');
-	const finder = (v, a) => v === a;
-	const absents = attendances.filter(v => finder(v, 'A'));
-	const lates = attendances.filter(v => finder(v, 'L'));
-	return !(absents.length > 1 || lates.length > 2);
+  if (s.includes('LLL'))  return false;
+  if (s.indexOf('A') !== s.lastIndexOf('A')) return false;
+	return true;
 }
 
 const attendances = 'LALL';
