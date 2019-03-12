@@ -28,7 +28,7 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 
 ```javascript
 /**
- * solved with kadaane's algorithm
+ * solved with kadane's algorithm
  * @param {number[]} prices
  * @return {number}
  */

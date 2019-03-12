@@ -1,5 +1,5 @@
 /**
- * solved with kadaane's algorithm
+ * solved with kadane's algorithm
  * @param {number[]} prices
  * @return {number}
  */
