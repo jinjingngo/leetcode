@@ -4,7 +4,7 @@
  * @param {Array} nums
  * @returns {undefined}
  */
-const moveZeros = (nums) => {
+const moveZeroes = (nums) => {
   if (!nums || nums.length === 0) return [];
   let insertPosition = 0;
   nums.forEach(num => {
@@ -16,5 +16,5 @@ const moveZeros = (nums) => {
 };
 
 const nums = [0, 1, 0, 3, 12];
-moveZeros(nums);
+moveZeroes(nums);
 console.log(JSON.stringify(nums));
