@@ -65,36 +65,33 @@ Explanation: Same as Example 1, except with the 5 in the top left corner being m
  * using Set
  * store digit from the row in format `${digit} in row ${row}`
  * store digit from the column in format `${digit} in row ${column}`
- * store digit from the block in formate `${digit} in block ${row / 3}-${column / 3}`
+ * store digit from the block in formate `${digit} in block ${Math.floor(row / 3)}-${Math.floor(column / 3)}`
  *
  * check if the element was in set then return false, otherwise this is a valid sudoku return true.
  * @param {Array} board
  * @returns {Boolean}
  */
-const isValidSudoku = (board) => {
+const isValidSudoku = board => {
   const seen = new Set();
   for (let i = 0; i < 9; ++i) {
     for (let j = 0; j < 9; ++j) {
       const digit = board[i][j];
       if (isNaN(digit)) continue;
       const inRow = `${digit} in row ${i}`;
-      const inColumn =  `${digit} in column ${j}`;
-      const inBlock = `${digit} in block ${i / 3}-${j / 3}`;
+      const inColumn = `${digit} in column ${j}`;
+      const inBlock = `${digit} in block ${Math.floor(i / 3)}-${Math.floor(j / 3)}`;
       const hasRow = seen.has(inRow);
       const hasColumn = seen.has(inColumn);
       const hasBlock = seen.has(inBlock);
-      if (!hasRow && !hasColumn && !hasBlock) {
-        seen.add(inRow);
-        seen.add(inColumn);
-        seen.add(inBlock);
-      } else {
-        console.log(seen, inRow, inColumn, inBlock);
-        return false;
-      }
+      if (hasRow || hasColumn || hasBlock) return false;
+      seen.add(inRow);
+      seen.add(inColumn);
+      seen.add(inBlock);
     }
   }
   return true;
 };
+
 
 
 const validBoard = [
