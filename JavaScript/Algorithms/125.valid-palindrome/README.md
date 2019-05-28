@@ -24,6 +24,16 @@ output: false
 
 ## Solution
 
-```javascript
+With JavaScript Array, things get easy.
 
+```javascript
+/**
+ * @param {String} s
+ * @return {Boolean}
+ */
+const isPalindrome = (s) => {
+  const forward = s.replace(/\W/g, '').toLowerCase();
+  const backward = [...forward].reverse().join('');
+  return forward === backward;
+};
 ```

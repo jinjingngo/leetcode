@@ -1,5 +1,4 @@
 /**
- *
  * @param {String} s
  * @return {Boolean}
  */
