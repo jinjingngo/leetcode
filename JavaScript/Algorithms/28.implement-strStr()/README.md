@@ -28,5 +28,5 @@ For the purpose of this problem, we will return 0 when `needle` is an empty stri
 ## Solution
 
 ```javascript
-
+const strStr = (haystack, needle) => haystack.indexOf(needle);
 ```
