@@ -46,10 +46,10 @@ Solution.prototype.reset = function () {
  */
 Solution.prototype.shuffle = function () {
   const copy = [ ...this.nums ];
-  const border = copy.length;
-  for (let i = 0; i < border; i++) {
-    const j = Math.floor(i * Math.random());
-    [copy[i], copy[j]] = [copy[j], copy[i]];
+  let border = copy.length;
+  while (border) {
+    const i = Math.floor(Math.random() * border--);
+    [copy[border], copy[i]] = [copy[i], copy[border]];
   }
   return copy;
 };
