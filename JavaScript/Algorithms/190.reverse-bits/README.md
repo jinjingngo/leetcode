@@ -28,5 +28,15 @@ Explanation: The input binary string 11111111111111111111111111111101 represents
 ## Solution
 
 ```javascript
+const reverseBits = n => {
+  let result = 0;
+  let count = 32;
 
+  while (count--) {
+    result *= 2;
+    result += n & 1;
+    n = n >> 1;
+  }
+  return result;
+};
 ```
