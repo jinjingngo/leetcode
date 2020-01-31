@@ -31,7 +31,7 @@ The above output corresponds to the 5  unique BST's shown below:
 ```javascript
 /**
  * Definition for a binary tree node.
- * @param {Number} val 
+ * @param {Number} val
  */
 function TreeNode (val) {
   this.val = val;
