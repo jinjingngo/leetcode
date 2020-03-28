@@ -84,7 +84,7 @@ function Node (val, neighbors) {
 }
 
 /**
- * @param {Node} node 
+ * @param {Node} node
  * @returns {Node}
  */
 const cloneGraph = (node) => {
