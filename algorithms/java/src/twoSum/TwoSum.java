@@ -13,7 +13,6 @@
  * Should return [0, 1], because nums[0] + num[1] = 2 + 7 = 9. 
  * 
  ******************************************************/
-// package twoSum;
 
 import java.util.HashMap;
 import java.util.Map;
