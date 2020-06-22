@@ -1,5 +1,6 @@
 // Source: https://leetcode.com/problems/max-consecutive-ones/
-/**
+
+/**********************************************************************************
  *
  * Given a binary array, find the maximum number of consecutive 1s in this array.
  *
@@ -9,7 +10,7 @@
  *
  * Given nums: [1, 1, 0, 1, 1, 1]
  * Should return 3
- */
+ **********************************************************************************/
 package maxConsecutiveOnes;
 
 class MaxConsecutiveOnes {
