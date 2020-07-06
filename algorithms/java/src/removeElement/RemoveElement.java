@@ -21,7 +21,14 @@ package removeElement;
 
 public class RemoveElement {
   public int removeElement(int[] nums, int val) {
-    return 2;
+    int length = nums.length - 1;
+    int leftPoint = 0;
+    for (int i = 0; i <= length; i++) {
+      int temporary = nums[i];
+      if (temporary == val) continue;
+      nums[leftPoint] = nums[i];
+      leftPoint += 1;
+    }
+    return leftPoint;
   }
 }
-
