@@ -24,8 +24,7 @@ public class RemoveElement {
     int length = nums.length - 1;
     int leftPoint = 0;
     for (int i = 0; i <= length; i++) {
-      int temporary = nums[i];
-      if (temporary == val) continue;
+      if (nums[i] == val) continue;
       nums[leftPoint] = nums[i];
       leftPoint += 1;
     }
